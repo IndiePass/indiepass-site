@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,26 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function ()
+Route::controller(PageController::class)->group(function () {
+    Route::get('/', 'home')->name('home');
+    Route::get('/downloads', 'downloads')->name('downloads');
+    Route::get('/android', 'android')->name('android');
+    Route::get('/desktop', 'desktop')->name('desktop');
+    Route::get('/support', 'support')->name('support');
+    Route::get('/privacy', 'privacy')->name('privacy');
+    Route::get('/android-callback', 'android-callback')->name('android-callback');
+});
 
-Route::get('/downloads', function () {
-    return view('downloads')
-});
-Route::get('/android', function () {
-    return view('android');
-});
-Route::get('/desktop', function () {
-    return view('desktop');
-});
-Route::get('/support', function () {
-    return view('support');
-});
-Route::get('/privacy', function () {
-    return view('privacy');
-});
-Route::get('/terms', function () {
-    return view('docs');
-});
-Route::get('/android-callback', function () {
-    return view('android-callback');
-});
+Route::get('/teapot', function () {
+    return abort(418);
+})->name('teapot');

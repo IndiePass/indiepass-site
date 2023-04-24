@@ -2,12 +2,14 @@ $blue: #214154;
 $white: #ffffff;
 $gray-600: #ced1d2;
 $gray-alt: #565858;
-$red: #bf2011;
+$red: #C62828;
+$red-alt: #bd3e38;
 $dark: darken($blue, 10%);
-$black: #000000;
-$primary: $blue;
+$black: #141414;
+$primary: $red;
+$secondary: $black;
 
-$enable-rounded: true;
+$enable-rounded: false;
 $enable-deprecation-messages: false;
 
 $headings-font-weight: 600;
@@ -21,8 +23,8 @@ $font-family-monospace: monospace;
 $line-height-base: 1.75;
 $headings-font-family: $font-family-sans-serif;
 
-$navbar-dark-color: $gray-600;
-$navbar-dark-hover-color: darken($navbar-dark-color, 5%);
+$navbar-dark-color: $white;
+$navbar-dark-hover-color: darken($navbar-dark-color, 25%);
 
 $pagination-border-width: 0;
 

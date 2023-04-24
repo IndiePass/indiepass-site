@@ -1,212 +1,20 @@
 // Variables
 @import "variables";
 
-$body-bg: $blue;
-$body-color: $white;
-$link-color: $gray-600;
-$pagination-bg: $blue;
-$pagination-disabled-bg: $blue;
-
 @import "fonts";
 @import "bootstrap";
 
-.navbar-blur {
-    background: $primary;
-}
-
-.ratio-stream {
-    height: 0;
-    max-width: 100%;
-    overflow: hidden;
-    padding-bottom: 58.9%;
-    position: relative;
-}
-
-.box {
-    background: $dark;
-    display: inline-block;
-    font-weight: 800;
-    line-height: 1;
-    margin: 0;
-    padding: 1rem;
-}
-
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-    .navbar-blur {
-        background: rgba($primary, 0.7);
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px);
-    }
-}
-
-.intro {
-    padding-top: 5vh;
-
-    h1 {
-        font-family: $font-family-sans-serif;
-        font-size: 2.5rem;
-    }
-
-    p {
-        background: $dark;
-        display: inline-block;
-        font-size: 1.5rem;
-        font-weight: 700;
-        letter-spacing: -0.05rem;
-        line-height: 1;
-        margin-bottom: 0;
-        padding: 1rem;
-    }
-
-    svg {
-        height: 1.5rem;
-        width: 1.5rem;
-    }
-}
-
-.avatar {
-    border-radius: 50%;
-
-    &-box {
-        margin-top: -1rem;
-    }
-
-    &-surround {
-        animation: gradient 15s ease infinite;
-        background: linear-gradient(-45deg, #214154, #5cb8ed, #7dcb8a, #4aff00);
-        background-size: 400% 400%;
-        border-radius: 50%;
-        display: inline-block;
-        padding: 0.5rem;
-
-        & {
-            margin-top: 0;
-        }
-    }
-
-    &-live {
-        animation: gradient 15s ease infinite;
-        background: linear-gradient(-45deg, $red, #cc5208);
-        background-size: 400% 400%;
-
-        & {
-            margin-top: 0;
-        }
-    }
-}
-
-.live-icon {
-    height: 50px;
-    left: 12.25rem;
-    margin-bottom: -4rem;
-    position: relative;
-    top: 1rem;
-    width: 150px;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0 50%;
-    }
-}
-
-#latest-photo {
-    .btn-close {
-        position: absolute;
-        right: 0.5rem;
-        top: 2rem;
-        z-index: 1;
-    }
-
-    .timestamp {
-        color: $white;
-        filter: drop-shadow(0 0 0.1rem $black);
-        font-weight: 700;
-        left: 0.5rem;
-        padding: 0.5rem;
-        position: absolute;
-        top: 1.5rem;
-    }
-}
-
-@media (min-width: 992px) {
-    .intro {
-        padding-bottom: 10vh;
-        padding-top: 20vh;
-
-        h1 {
-            font-size: 5rem;
-        }
-
-        p {
-            font-size: 2rem;
-            font-weight: 800;
-        }
-
-        .bi,
-        svg {
-            font-size: 2rem;
-            height: 2rem;
-            line-height: 1;
-            width: 2rem;
-        }
-    }
-}
-
-.navbar-brand {
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-.site-main {
-    min-height: calc(90vh - 60px);
-}
-
-.photo-thumb {
-    img {
-        height: 100%;
-        object-fit: cover;
-        width: 100%;
-    }
-}
-
-.tiny-avatar {
-    border-radius: 50%;
-    height: 2rem;
-    width: 2rem;
-}
-
-.entry-content {
-    p {
-        line-height: 1.75;
-    }
-}
-
-.navbar-brand {
-    text-transform: uppercase;
-}
-
-.text-gray {
-    color: $gray-alt;
+.bg-gradient {
+    background: $red;
+    //background: linear-gradient(-45deg, $red, $red-alt);
 }
 
 .error-page {
     padding-top: 15vh;
-
+    min-height: 80vh;
     & h1 {
         font-size: 5rem;
     }
-}
-
-.error-cat {
-    margin-top: -120px;
-    text-align: end;
 }
 
 .site-footer {
@@ -215,65 +23,17 @@ $pagination-disabled-bg: $blue;
     text-align: center;
 }
 
-.nav-link.active {
-    font-weight: 700;
+.hero-phone {
+    max-height: 70vh;
+    max-width: 100%;
 }
 
+@media (min-width: 768px) {
+    .home-fill {
+        min-height: 86vh;
 
-$color_1: #555;
-$color_2: #111;
-
-#webmentions {
-    margin: 0;
-    position: relative;
-    z-index: 100;
-    line-height: 1.2em;
-    .comments {
-        max-height: 20em;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        font-size: 80%;
-        li {
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            .text {
-                color: $color_1;
-                font-style: italic;
-                text-decoration: none;
-            }
-
-        }
     }
-    .reacts {
-        img {
-            margin: 3px -1ex 1px 0;
-        }
-    }
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 4px;
-    }
-    li {
-        text-indent: -1em;
-        padding-left: 1em;
-    }
-    a.reaction {
-        position: relative;
-        text-decoration: none;
-        text-shadow: 0 0 3px white;
-        margin-right: 0;
-        letter-spacing: -1ex;
-        img {
-            max-height: 1.3em;
-            margin-right: -1ex;
-            border-radius: 25%;
-        }
-        sub {
-            font-size: 50%;
-        }
+    .container-fluid {
+        padding-right: 0;
     }
 }
-
-

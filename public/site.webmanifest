@@ -1,6 +1,6 @@
 {
-    "name": "Indigenous",
-    "short_name": "Indigenous",
+    "name": "IndiePass",
+    "short_name": "IndiePass",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -19,6 +19,6 @@
             "purpose": "maskable"
         },
     ],
-    "theme_color": "#d54049",
-    "background_color": "#d54049"
+    "theme_color": "#C62828",
+    "background_color": "#C62828"
 }

@@ -16,7 +16,7 @@
 
             <p>We collect bug reports using the Crashlytics software to make your app experience better.</p>
 
-            <p>Indigenous's app collects aggregate, anonymous statistics, such as the percentage of users who use particular features, to improve the app.</p>
+            <p>IndiePass's app collects aggregate, anonymous statistics, such as the percentage of users who use particular features, to improve the app.</p>
 
             <h2>Technical basics</h2>
             <p>If you enable notifications, we must store a token to send them. We never use notifications for marketing.</p>

@@ -1,0 +1,16 @@
+{
+  "resources/assets/fonts/Inter-var.woff2": {
+    "file": "assets/Inter-var-d30c3bd0.woff2",
+    "src": "resources/assets/fonts/Inter-var.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-7c24b46b.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/sass/style.scss": {
+    "file": "assets/style-ec8de984.css",
+    "isEntry": true,
+    "src": "resources/sass/style.scss"
+  }
+}

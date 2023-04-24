@@ -9,11 +9,6 @@ class PageController extends Controller
         return view('home');
     }
 
-    public function downloads()
-    {
-        return view('downloads');
-    }
-
     public function android()
     {
         return view('android');

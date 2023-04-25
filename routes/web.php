@@ -20,7 +20,7 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/desktop', 'desktop')->name('desktop');
     Route::get('/support', 'support')->name('support');
     Route::get('/privacy', 'privacy')->name('privacy');
-    Route::get('/android-callback', 'android-callback')->name('android-callback');
+    Route::get('/android-callback', 'androidCallback')->name('android-callback');
 });
 
 Route::get('/teapot', function () {

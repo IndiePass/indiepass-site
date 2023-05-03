@@ -21,8 +21,7 @@
     <meta name="twitter:title" content="IndiePass - @yield('title')"/>
     <meta name="twitter:image" content="{{ env('APP_URL')}}/images/@yield('ogimg', 'og-logo.jpg')"/>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
     <meta name="theme-color" content="#D54049">
     <title>IndiePass</title>
     @vite(['resources/sass/style.scss', 'resources/js/app.js'])

@@ -9,12 +9,16 @@
                 <h1 class="d-none p-name">IndiePass</h1>
                 <p class="h2 my-4">A social app for the IndieWeb.</p>
                 <div class="row mb-5">
-                    <div class="col-md-6">
-                        <a href="https://play.google.com/store/apps/details?id=com.indieweb.indigenous" class="p-1"><img src="{{ asset('/images/google-play-badge.svg') }}" height="50" alt="Get it on Google Play" class="img-fluid"></a>
+                    <div class="col-md-6 p-2">
+                        <a href="https://play.google.com/store/apps/details?id=com.indieweb.indigenous"><img src="{{ asset('/images/google-play-badge.svg') }}" alt="Get it on Google Play" class="img-fluid"></a>
                     </div>
-                    <div class="col-md-6">
-                        <a href="https://f-droid.org/en/packages/com.indieweb.indigenous/"><img src="{{ asset('/images/fdroid-badge.svg') }}" alt="Get it on F-Droid" height="50"  class="img-fluid"></a>
+                    <div class="col-md-6 p-2">
+                        <a href="https://www.amazon.com/gp/product/B0C3KWR6V6"><img src="{{ asset('/images/amazon-appstore-badge.svg') }}" alt="Get it on F-Droid" class="img-fluid"></a>
                     </div>
+                    <div class="col-md-6 p-2">
+                        <a href="https://f-droid.org/en/packages/com.indieweb.indigenous/"><img src="{{ asset('/images/fdroid-badge.svg') }}" alt="Get it on F-Droid" class="img-fluid"></a>
+                    </div>
+
                 </div>
                 </div>
             </div>

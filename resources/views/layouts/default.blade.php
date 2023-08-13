@@ -16,6 +16,11 @@
     <meta property="og:image:secure_url" content="{{ env('APP_URL')}}/images/@yield('ogimg', 'og-logo.jpg')"/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
+    @if (Str::startsWith($current = url()->current(), 'https://'))
+        <link rel="canonical" href="{{ str_replace('https://www.', 'https://', $current) }}">
+    @else
+        <link rel="canonical" href="{{ str_replace('https://', 'https://www.', $current) }}">
+    @endif
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:description" content="@yield('metadescription', 'A Social Feed Reader for the IndieWeb' )"/>
     <meta name="twitter:title" content="IndiePass - @yield('title')"/>
@@ -70,16 +75,15 @@
             <div class="col-lg-4">
                 <img src="/images/logo.svg" alt="IndiePass" height="40" width="183" class="mb-3"/>
                 <nav class="nav">
-                    <a href="{{ env('APP_URL')}}/support" class="nav-link text-muted ps-0">Support</a>
-                    <a href="{{ env('APP_URL')}}/privacy" class="nav-link text-muted">Privacy</a>
+                    <a href="{{ env('APP_URL')}}/support" class="nav-link ps-0">Support</a>
+                    <a href="{{ env('APP_URL')}}/privacy" class="nav-link">Privacy</a>
                 </nav>
             </div>
             <div class="col-lg-8 text-end">
-                <p>Maintained by <a class="text-muted" href="https://marksuth.dev">Mark Sutherland</a>.<br> Originally
-                    developed by <a class="text-muted" href="https://eddiehinkle.com">Eddie Hinkle</a>. Desktop &amp;
-                    Android verison originally developed by <a class="text-muted"
-                                                               href="https://realize.be">realize.be</a>.<br> Licensed
-                    under <a href="https://opensource.org/licenses/GPL-3.0" class="text-muted">GPL-3.0</a>.</p>
+                <p>Maintained by <a href="https://marksuth.dev">Mark Sutherland</a>.<br> Originally
+                    developed by <a href="https://eddiehinkle.com">Eddie Hinkle</a>. Desktop &amp;
+                    Android version originally developed by <a href="https://realize.be">realize.be</a>.
+                    <br> Licensed under <a href="https://opensource.org/licenses/GPL-3.0">GPL-3.0</a>.</p>
             </div>
         </div>
     </div>

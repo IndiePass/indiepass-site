@@ -4,12 +4,12 @@
     "src": "resources/assets/fonts/Inter-var.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-7c24b46b.js",
+    "file": "assets/app-7a4ecde0.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/sass/style.scss": {
-    "file": "assets/style-287885ae.css",
+    "file": "assets/style-28e64128.css",
     "isEntry": true,
     "src": "resources/sass/style.scss"
   }

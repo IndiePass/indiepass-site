@@ -10,16 +10,28 @@
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="IndiePass - @yield('title')"/>
     <meta property="og:description" content="@yield('metadescription')"/>
-    <meta property="og:url" content="@yield('ogurl', config('app.url'))"/>
+    @if (Str::startsWith($current = url()->current(), 'https://www'))
+    <meta property="og:url" content="{{ str_replace('https://www.', 'https://', $current) }}" />
+    @elseif (Str::startsWith($current = url()->current(), 'https://indigenous.marksuth.dev'))
+    <meta property="og:url" content="{{ str_replace('https://indigenous.marksuth.dev', 'https://indiepass.app', $current) }}">
+    @elseif (Str::startsWith($current = url()->current(), 'https://indiepass.marksuth.dev'))
+    <meta property="og:url" content="{{ str_replace('https://indiepass.marksuth.dev', 'https://indiepass.app', $current) }}">
+    @else
+    <meta property="og:url" content="{{ $current }}">
+    @endif
     <meta property="og:site_name" content="IndiePass"/>
     <meta property="og:image" content="{{ env('APP_URL')}}/images/@yield('ogimg', 'og-logo.jpg')"/>
     <meta property="og:image:secure_url" content="{{ env('APP_URL')}}/images/@yield('ogimg', 'og-logo.jpg')"/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
-    @if (Str::startsWith($current = url()->current(), 'https://'))
-        <link rel="canonical" href="{{ str_replace('https://www.', 'https://', $current) }}">
+    @if (Str::startsWith($current = url()->current(), 'https://www'))
+    <link rel="canonical" href="{{ str_replace('https://www.', 'https://', $current) }}">
+    @elseif (Str::startsWith($current = url()->current(), 'https://indigenous.marksuth.dev'))
+    <link rel="canonical" href="{{ str_replace('https://indigenous.marksuth.dev', 'https://indiepass.app', $current) }}">
+    @elseif (Str::startsWith($current = url()->current(), 'https://indiepass.marksuth.dev'))
+    <link rel="canonical" href="{{ str_replace('https://indiepass.marksuth.dev', 'https://indiepass.app', $current) }}">
     @else
-        <link rel="canonical" href="{{ str_replace('https://', 'https://www.', $current) }}">
+    <link rel="canonical" href="{{ $current }}">
     @endif
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:description" content="@yield('metadescription', 'A Social Feed Reader for the IndieWeb' )"/>
@@ -37,9 +49,8 @@
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
     <div class="container">
-        <a class="h-app u-url navbar-brand" href="{{ env('APP_URL')}}"><img src="/images/logo.svg" alt="IndiePass"
-                                                                            height="40" width="183"
-                                                                            class="me-1 u-logo"/></a>
+        <a class="h-app u-url navbar-brand" href="{{ env('APP_URL')}}">
+            <img src="/images/logo.svg" alt="IndiePass"  height="40" width="183" class="me-1 u-logo"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
                 aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -56,7 +67,7 @@
                     <a class="nav-link" href="{{ route('support') }}">Support</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/marksuth/indigenous-android">
+                    <a class="nav-link" href="https://github.com/indiepass/indigenous-android">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                              class="bi bi-github" viewBox="0 0 16 16">
                             <path
@@ -90,5 +101,4 @@
 </footer>
 @yield('extrascripts')
 </body>
-
 </html>

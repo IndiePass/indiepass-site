@@ -1,0 +1,39 @@
+@extends('layouts.sitemap')
+@section('sitemap')
+        <url>
+            <loc>https://indiepass.app</loc>
+            <lastmod>2023-08-10T19:21:31+00:00</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>1.0</priority>
+        </url>
+        <url>
+            <loc>https://indiepass/android</loc>
+            <lastmod>2023-08-10T19:21:31+00:00</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
+            <loc>https://indiepass/android</loc>
+            <lastmod>2023-08-10T19:21:31+00:00</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
+            <loc>https://indiepass/desktop</loc>
+            <lastmod>2023-08-10T19:21:31+00:00</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
+            <loc>https://indiepass/support</loc>
+            <lastmod>2023-08-10T19:21:31+00:00</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.6</priority>
+        </url>
+        <url>
+            <loc>https://indiepass/privacy</loc>
+            <lastmod>2023-08-10T19:21:31+00:00</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.6</priority>
+        </url>
+@endsection

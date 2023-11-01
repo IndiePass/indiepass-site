@@ -13,7 +13,7 @@
                     <div class="row">
                         <div class="col-md-7">
                             <p>Available on Windows, Linux and macOS (Intel chip & Apple Silicon).</p>
-                            <p><a href="https://github.com/IndiePass/indigenous-desktop/releases/tag/v1.3.0"
+                            <p><a href="https://github.com/IndiePass/indiepass-desktop/releases/tag/v1.3.0"
                                   class="btn btn-primary btn-lg me-3">Download</a></p>
                             <p class="text-muted">Current version 1.3.0</p>
                         </div>

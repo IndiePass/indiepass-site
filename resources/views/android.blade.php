@@ -30,7 +30,7 @@
                                 </div>
                             </div>
                             <p class="p-1">Found an issue with the app or have any feedback or suggestions? Raise an
-                                issue <a href="https://github.com/indiepass/indigenous-android/issues">on GitHub</a>.
+                                issue <a href="https://github.com/indiepass/indiepass-android/issues">on GitHub</a>.
                             </p>
 
                         </div>
@@ -111,7 +111,7 @@
                 <li>Pleroma: not found yet (info welcome!)</li>
             </ul>
             <p class="pt-5">Found an issue with the app or have any feedback or suggestions? Raise an issue <a
-                    href="https://github.com/indiepass/indigenous-android">on GitHub</a>.</p>
+                    href="https://github.com/indiepass/indiepass-android">on GitHub</a>.</p>
         </div>
     </section>
 @endsection

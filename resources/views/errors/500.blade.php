@@ -1,5 +1,5 @@
-@extends('errors::layout')
-
-@section('title', __('Server Error'))
-@section('code', '500')
-@section('message', __('Internal Server Error'))
+@extends('errors.layout' , [
+    'title' => 'Internal Server Error',
+    'code' => '500',
+    'message' => 'Something went wrong. Please try again later.'
+])

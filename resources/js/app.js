@@ -1,1 +1,1 @@
-import {Collapse, Modal} from "bootstrap";
+import './bootstrap';

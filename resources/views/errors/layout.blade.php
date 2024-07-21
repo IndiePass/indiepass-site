@@ -1,17 +1,21 @@
-@extends('layouts.default')
+@extends('layouts.default'
+, ['title' => $code . ' Error',
+'description' => 'HTTP Error ' . $code . ' - ' . $message,
+])
 @section('metatags')
-<meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="noindex, nofollow"/>
 @endsection
-@section('page')
-    <div class="error-page">
-        <div class="container">
-    <h1 style="font-size:5rem">Ahh 💩, it's a @yield('code').</h1>
-    <p class="text-muted">HTTP ERROR @yield('code')</p>
-    <p>@yield('message')</p>
-    <p>If you believe you have reached this page in error, please drop me an email.</p>
-    <br><a href="/" class="btn btn-secondary btn-lg">Return Home</a>
-        </div>
-</div>
+@section('content')
+    <section id="error-page">
+        <h1>@if($exception->getStatusCode() == 418)
+                🫖, I'm a teapot.
+            @else
+                {{ $code }}
+            @endif</h1>
+        <p>HTTP ERROR {{ $code }}</p>
+        <p>{{ $message }}</p>
+        <p>If you believe you’ve reached this page in error, please drop me an email.</p>
+        <br><a href="{{ config('app.url') }}" class="btn">Return Home <i class="fa-solid fa-house"></i></a>
+    </section>
 @endsection
-@section('strap')
-@endsection
+

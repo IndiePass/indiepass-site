@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 class SitemapController extends Controller
 {
     public function index()
@@ -15,7 +14,7 @@ class SitemapController extends Controller
     public function pages()
     {
         return response()
-            ->view('sitemaps.pages', compact('pages'))
+            ->view('sitemaps.pages')
             ->header('Content-Type', 'text/xml');
     }
 }

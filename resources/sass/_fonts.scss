@@ -1,10 +1,50 @@
 // Inter
 @font-face {
-    font-family: "Inter";
+    font-family: 'Inter var';
     font-weight: 100 900;
-    font-style: oblique 0deg 10deg;
+    font-style: normal;
     font-display: swap;
-    src: url("@/fonts/Inter-var.woff2") format("woff2 supports variations(gvar)"),
-    url("@/fonts/Inter-var.woff2") format("woff2-variations"),
-    url("@/fonts/Inter-var.woff2") format("woff2");
+    src: url("~inter/variable/InterVariable.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'Inter var';
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+    src: url("~inter/variable/InterVariable-Italic.woff2") format("woff2");
+}
+
+// Font Awesome 6
+@import "~@fortawesome/fontawesome-free/scss/functions";
+@import "~@fortawesome/fontawesome-free/scss/variables";
+@import "~@fortawesome/fontawesome-free/scss/mixins";
+@import "~@fortawesome/fontawesome-free/scss/core";
+@import "~@fortawesome/fontawesome-free/scss/sizing";
+@import "~@fortawesome/fontawesome-free/scss/fixed-width";
+@import "~@fortawesome/fontawesome-free/scss/list";
+@import "~@fortawesome/fontawesome-free/scss/icons";
+@import "~@fortawesome/fontawesome-free/scss/screen-reader";
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url('~@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2') format('woff2');
+}
+
+.fas, .fa-solid {font-weight: 900;}
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url('~@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2') format('woff2');
+}
+
+.fab, .fa-brands {font-weight: 400;}
+
+@each $name, $icon in $fa-brand-icons {
+    .#{$fa-css-prefix}-#{$name}:before { content: unquote("\"#{ $icon }\""); }
 }

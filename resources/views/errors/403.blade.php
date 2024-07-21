@@ -1,5 +1,6 @@
-@extends('errors::layout')
+@extends('errors.layout' , [
+    'title' => 'Forbidden',
+    'code' => '403',
+    'message' => 'You\'re not meant to be here. Go away.'
+])
 
-@section('title', __('Forbidden'))
-@section('code', '403')
-@section('message', __($exception->getMessage() ?: 'Forbidden'))

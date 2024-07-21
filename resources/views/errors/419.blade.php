@@ -1,6 +1,5 @@
-@extends('errors::layout')
-
-@section('title', __('Page Expired'))
-@section('code', '419')
-@section('message', __('The page you requested has expired.'))
-
+@extends('errors.layout' , [
+    'title' => 'Page Expired',
+    'code' => '419',
+    'message' => 'The page you requested has expired.'
+])

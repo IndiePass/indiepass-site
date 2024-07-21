@@ -14,11 +14,6 @@ class PageController extends Controller
         return view('android');
     }
 
-    public function desktop()
-    {
-        return view('desktop');
-    }
-
     public function support()
     {
         return view('support');
@@ -32,5 +27,19 @@ class PageController extends Controller
     public function androidCallback()
     {
         return view('android-callback');
+    }
+
+    public function webmanifest()
+    {
+        return response()
+            ->view('pages.webmanifest')
+            ->header('Content-Type', 'application/manifest+json');
+    }
+
+    public function robots()
+    {
+        return response()
+            ->view('pages.robots')
+            ->header('Content-Type', 'text/plain');
     }
 }

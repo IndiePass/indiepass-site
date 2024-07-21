@@ -1,18 +1,19 @@
 {
     "private": true,
+    "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite build"
     },
     "devDependencies": {
-        "@sakadda/vite-plugin-laravel-purgecss": "^0.0.2",
-        "axios": "^1.1.2",
-        "laravel-vite-plugin": "^0.7.2",
-        "vite": "^4.0.0",
-        "sass": "^1.58.3"
+        "@erbelion/vite-plugin-laravel-purgecss": "^0.2.3",
+        "axios": "^1.6.4",
+        "laravel-vite-plugin": "^1.0",
+        "sass": "^1.72.0",
+        "vite": "^5.0"
     },
     "dependencies": {
-        "bootstrap": "^5.2.3",
-        "inter-ui": "^3.19.3"
+        "@fortawesome/fontawesome-free": "^6.5.2",
+        "inter-ui": "^4.0.0"
     }
 }

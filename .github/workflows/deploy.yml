@@ -49,7 +49,16 @@ jobs:
         ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
 
     - name: Deploying updates to site
-      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && php artisan down --retry=15 && git pull && composer install --no-dev --optimize-autoloader && php artisan migrate --force && php artisan optimize:clear && php artisan up && exit"
+      run: >
+        ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
+        cd ${{ secrets.WORK_DIR }} &&
+        php artisan down --retry=15 &&
+        git pull &&
+        composer install --no-dev --optimize-autoloader &&
+        php artisan migrate --force &&
+        php artisan optimize:clear &&
+        php artisan up &&
+        exit"
 
     - name: cleanup
       run: rm -rf ~/.ssh

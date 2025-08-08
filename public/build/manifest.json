@@ -1,29 +1,28 @@
 {
   "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2": {
-    "file": "assets/fa-brands-400-O7nZalfM.woff2",
+    "file": "assets/fa-brands-400-DFY6gyJh.woff2",
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"
   },
   "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2": {
-    "file": "assets/fa-solid-900-DOQJEhcS.woff2",
+    "file": "assets/fa-solid-900-BQpGBb1f.woff2",
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"
   },
   "node_modules/inter-ui/variable/InterVariable-Italic.woff2": {
-    "file": "assets/InterVariable-Italic-d6KXgdvN.woff2",
+    "file": "assets/InterVariable-Italic-FCBEiFp6.woff2",
     "src": "node_modules/inter-ui/variable/InterVariable-Italic.woff2"
   },
   "node_modules/inter-ui/variable/InterVariable.woff2": {
-    "file": "assets/InterVariable-CWi-zmRD.woff2",
+    "file": "assets/InterVariable-DiVDrmQJ.woff2",
     "src": "node_modules/inter-ui/variable/InterVariable.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-BmrwFrBv.js",
+    "file": "assets/app-C0G0cght.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
   },
   "resources/sass/style.scss": {
-    "file": "assets/style-CLERJmbP.css",
-    "src": "resources/sass/style.scss",
-    "isEntry": true
+    "file": "assets/style-CnggnCxI-30364cfc.css",
+    "src": "resources/sass/style.scss"
   }
 }

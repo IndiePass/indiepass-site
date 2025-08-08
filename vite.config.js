@@ -6,7 +6,7 @@ export default defineConfig({
     resolve: {
         alias: {
             '~inter': '/node_modules/inter-ui',
-            '~@fortawesome': '/node_modules/@fortawesome',
+            '~fontawesome': '/node_modules/@fortawesome',
             '@': '/resources/assets',
         }
     },

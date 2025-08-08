@@ -1,3 +1,9 @@
+@import "base";
+@import "~inter/inter-variable.css";
+@import "~fontawesome/fontawesome-free/css/fontawesome.css";
+@import "~fontawesome/fontawesome-free/css/solid.css";
+@import "~fontawesome/fontawesome-free/css/brands.css";
+
 :root {
     --primary: #C62828;
     --alt: #bd3e38;
@@ -10,7 +16,7 @@
     --body-font: 'Inter', sans-serif;
 }
 
-@import "base";
+
 
 #intro {
     background-color: var(--primary);
